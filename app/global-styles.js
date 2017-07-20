@@ -1,11 +1,14 @@
 import { injectGlobal } from 'styled-components';
 
+import './app.css';
+
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
   html,
   body {
     height: 100%;
     width: 100%;
+    background: #FAFAFA;
   }
 
   body {
@@ -13,18 +16,24 @@ injectGlobal`
   }
 
   body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   #app {
-    background-color: #fafafa;
+    position: relative;
+    background: #FAFAFA;
+    height: 100%;
+    width: 100%;
     min-height: 100%;
-    min-width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  p,
-  label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    line-height: 1.5em;
+  button {
+    &:hover,
+    &:focus {
+      outline: none;
+      cursor: pointer;
+    }
   }
 `;
